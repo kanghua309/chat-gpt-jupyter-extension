@@ -106,7 +106,7 @@ function create_interface(siteConfig: NotebookInterface, siteName: string) {
         );
       }
     }),
-    <VoiceRecorder siteName={siteName} siteConfig={siteConfig} />,
+    //<VoiceRecorder siteName={siteName} siteConfig={siteConfig} />,
   ];
 
   render(buttons, controls_container);
