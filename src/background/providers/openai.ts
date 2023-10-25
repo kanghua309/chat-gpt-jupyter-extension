@@ -40,7 +40,7 @@ export class OpenAIProvider implements Provider {
         })
     }
     
-    console.error(json_body)
+    console.debug(json_body)
 
     let result = ''
     await fetchSSE(endpoint, {
