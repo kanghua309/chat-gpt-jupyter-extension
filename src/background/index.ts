@@ -6,7 +6,7 @@ import { Provider } from './types'
 import { Buffer } from 'buffer'
 
 async function generateAnswers(port: Browser.Runtime.Port, question: string) {
-    const providerConfigs = await getProviderConfigs()
+    /*const providerConfigs = await getProviderConfigs()
   
     let provider: Provider
     if (providerConfigs.provider === ProviderType.WebClient) {
@@ -18,8 +18,9 @@ async function generateAnswers(port: Browser.Runtime.Port, question: string) {
       provider = new OpenAIProvider(apiKey, model)
     } else {
       throw new Error(`Unknown provider ${providerConfigs.provider}`)
-    }
-  
+    }*/
+    let provider: Provider 
+    provider = new OpenAIProvider("123456", "gpt-3.5-turbo")
     const controller = new AbortController()
     port.onDisconnect.addListener(() => {
       controller.abort()

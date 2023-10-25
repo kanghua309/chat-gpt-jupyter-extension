@@ -8,7 +8,8 @@ export class OpenAIProvider implements Provider {
   }
 
   async generateAnswer(params: GenerateAnswerParams) {
-    let endpoint = 'https://api.openai.com/v1/chat/completions'
+    //let endpoint = 'https://api.openai.com/v1/chat/completions'
+    let endpoint = 'http://127.0.0.1:8080/v1/chat/completions'
     let model_type = "chat"
 
     if (this.model === "text-davinci-003") {
@@ -38,6 +39,8 @@ export class OpenAIProvider implements Provider {
             max_tokens: 2048,
         })
     }
+    
+    console.error(json_body)
 
     let result = ''
     await fetchSSE(endpoint, {
