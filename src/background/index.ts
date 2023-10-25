@@ -116,69 +116,69 @@ if (details.reason === 'install') {
 }
 })
 
-Browser.commands.onCommand.addListener((command) => {
-    if (command === 'format_code') {
-      Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-        if (tabs.length === 0 || !tabs[0].id) {
-          return;
-        }
-        Browser.tabs.sendMessage(tabs[0].id, { action: 'formatCode' });
-      });
-    }
+// Browser.commands.onCommand.addListener((command) => {
+//     if (command === 'format_code') {
+//       Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//         if (tabs.length === 0 || !tabs[0].id) {
+//           return;
+//         }
+//         Browser.tabs.sendMessage(tabs[0].id, { action: 'formatCode' });
+//       });
+//     }
 
-    if (command === 'explain_code') {
-        Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-          if (tabs.length === 0 || !tabs[0].id) {
-            return;
-          }
-          Browser.tabs.sendMessage(tabs[0].id, { action: 'explainCode' });
-        });
-      }
+//     if (command === 'explain_code') {
+//         Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//           if (tabs.length === 0 || !tabs[0].id) {
+//             return;
+//           }
+//           Browser.tabs.sendMessage(tabs[0].id, { action: 'explainCode' });
+//         });
+//       }
 
-    if (command === 'debug_code') {
-        Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-            if (tabs.length === 0 || !tabs[0].id) {
-            return;
-            }
-            Browser.tabs.sendMessage(tabs[0].id, { action: 'debugCode' });
-        });
-    }
+//     if (command === 'debug_code') {
+//         Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//             if (tabs.length === 0 || !tabs[0].id) {
+//             return;
+//             }
+//             Browser.tabs.sendMessage(tabs[0].id, { action: 'debugCode' });
+//         });
+//     }
 
-    if (command === 'complete_code') {
-        Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-            if (tabs.length === 0 || !tabs[0].id) {
-            return;
-            }
-            Browser.tabs.sendMessage(tabs[0].id, { action: 'completeCode' });
-        });
-    }
+//     if (command === 'complete_code') {
+//         Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//             if (tabs.length === 0 || !tabs[0].id) {
+//             return;
+//             }
+//             Browser.tabs.sendMessage(tabs[0].id, { action: 'completeCode' });
+//         });
+//     }
 
-    if (command === 'review_code') {
-        Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-            if (tabs.length === 0 || !tabs[0].id) {
-            return;
-            }
-            Browser.tabs.sendMessage(tabs[0].id, { action: 'reviewCode' });
-        });
-    }
+//     if (command === 'review_code') {
+//         Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//             if (tabs.length === 0 || !tabs[0].id) {
+//             return;
+//             }
+//             Browser.tabs.sendMessage(tabs[0].id, { action: 'reviewCode' });
+//         });
+//     }
 
-    if (command === 'ask_question') {
-        Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-            if (tabs.length === 0 || !tabs[0].id) {
-            return;
-            }
-            Browser.tabs.sendMessage(tabs[0].id, { action: 'askQuestion' });
-        });
-    }
+//     if (command === 'ask_question') {
+//         Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//             if (tabs.length === 0 || !tabs[0].id) {
+//             return;
+//             }
+//             Browser.tabs.sendMessage(tabs[0].id, { action: 'askQuestion' });
+//         });
+//     }
 
-    if (command === 'voice_command') {
-        Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
-            if (tabs.length === 0 || !tabs[0].id) {
-            return;
-            }
-            Browser.tabs.sendMessage(tabs[0].id, { action: 'voiceCommand' });
-        });
-    }
+//     if (command === 'voice_command') {
+//         Browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+//             if (tabs.length === 0 || !tabs[0].id) {
+//             return;
+//             }
+//             Browser.tabs.sendMessage(tabs[0].id, { action: 'voiceCommand' });
+//         });
+//     }
 
-  });
+//   });
   
