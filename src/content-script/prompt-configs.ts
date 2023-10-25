@@ -19,7 +19,7 @@ export interface PromptSettings {
 export const promptSettings: Record<string, PromptSettings> = {
     format: {
         buttonId: "ai_ext_format_code",
-        buttonLabel : "Format",
+        buttonLabel : "格式化",
         buttonIcon : PaintbrushIcon,
         title : "ChatGPT - Improve Formatting", 
         maxCharPrevCells: 0,
@@ -27,21 +27,21 @@ export const promptSettings: Record<string, PromptSettings> = {
     }, 
     explain: {
         buttonId: "ai_ext_explain_code",
-        buttonLabel : "Explain",
+        buttonLabel : "解释",
         buttonIcon : ProjectRoadmapIcon,
         title : "ChatGPT - Explain Code",
         maxCharPrevCells: 1250,
     },
     debug: {
         buttonId: "ai_ext_debug_code",
-        buttonLabel : "Debug",
+        buttonLabel : "调试",
         buttonIcon : BugIcon,
         title : "ChatGPT - Debug Code",
         maxCharPrevCells: 500,
     },
     complete: {
         buttonId: "ai_ext_complete_code",
-        buttonLabel : "Complete",
+        buttonLabel : "补全",
         buttonIcon : CommandPaletteIcon,
         title : "ChatGPT - Complete Code",
         maxCharPrevCells: 1250,
@@ -49,16 +49,16 @@ export const promptSettings: Record<string, PromptSettings> = {
     },
     review : {
         buttonId: "ai_ext_review_code",
-        buttonLabel : "Review",
+        buttonLabel : "审查",
         buttonIcon : CodeReviewIcon,
         title : "ChatGPT - Code Review",
         maxCharPrevCells: 1250,
     },
-    question : {
-        buttonId: "ai_ext_question",
-        buttonLabel : "Question",
-        buttonIcon : CommentIcon,
-        title : "ChatGPT - Question",
-        maxCharPrevCells: 1250,
-    }
+    // question : {
+    //     buttonId: "ai_ext_question",
+    //     buttonLabel : "提问",
+    //     buttonIcon : CommentIcon,
+    //     title : "ChatGPT - Question",
+    //     maxCharPrevCells: 1250,
+    // }
 }

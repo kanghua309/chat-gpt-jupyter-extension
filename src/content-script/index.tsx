@@ -73,8 +73,8 @@ function create_interface(siteConfig: NotebookInterface, siteName: string) {
 
   const buttons = [
     <Button
-        id = "ai_ext_null"
-      name="ChatGPT:"
+      id = "ai_ext_null"
+      name="AI >>"
       onClick={() => null}
       icon={CopilotIcon}
       disabled={true}

@@ -6,14 +6,15 @@ interface Props {
     onClick : () => void,
     icon : Icon,
     disabled? : boolean | false, 
-    siteName: string
+    siteName: string,
+    // classNmae: string
 }
 
 export function Button(props: Props) {  
     const isNotebook = props.siteName == "notebook"
     return (
         <button id={props.id} className="btn btn-default btn-xs chat-gpt-button" onClick={props.onClick } disabled={props.disabled} style= {{marginTop: isNotebook ? '-0.5px' : '4px' }} title={props.name} >
-            <props.icon size='small' className="icon" />
+            <props.icon size='small' className="icon" /> {isNotebook && props.name}
         </button> 
     )
 
